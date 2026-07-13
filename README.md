@@ -234,6 +234,8 @@ src\packet_parser.cpp ^
 src\sni_extractor.cpp ^
 src\types.cpp ^
 -o dpi_engine.exe
+
+(after this if dpi_enigine.exe is visible in your folders then you are ok to go)
 ```
 
 ---
