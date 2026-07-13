@@ -371,7 +371,7 @@ This project provided practical experience in:
 
 ---
 
-## Future Implementation
+## Future Enhancements
 
 * Interactive network analytics dashboard using **Streamlit** and **Plotly**.
 * Real-time visualization of traffic statistics and application-wise analysis.
