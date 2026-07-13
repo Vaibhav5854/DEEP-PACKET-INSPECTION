@@ -374,3 +374,7 @@ This project provided practical experience in:
 # Conclusion
 
 This project demonstrates the implementation of a **Deep Packet Inspection (DPI) Engine** capable of parsing network packets, identifying applications from encrypted and unencrypted traffic, tracking network flows, applying user-defined filtering rules, and generating a filtered PCAP file along with detailed traffic statistics. It provides practical exposure to packet processing, network protocol analysis, concurrent programming, and modern network security techniques commonly used in enterprise firewalls and traffic management systems.
+
+
+Vaibhav Raj
+B.tech, BIT Mesra
