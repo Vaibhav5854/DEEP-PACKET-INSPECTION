@@ -209,48 +209,55 @@ packet_analyzer/
 
 ---
 
-# Building the Project
+### Build Commands
 
-### Windows (MinGW)
-
+**Simple Version:**
 ```cmd
-g++ -std=c++17 -O2 -I include ^
-src\dpi_mt.cpp ^
-src\pcap_reader.cpp ^
-src\packet_parser.cpp ^
-src\sni_extractor.cpp ^
-src\types.cpp ^
--o dpi_engine.exe
-
-(after this if dpi_enigine.exe is visible in your folders then you are ok to go)
+g++ -std=c++17 -O2 -I include -o dpi_simple ^
+    src/main_working.cpp ^
+    src/pcap_reader.cpp ^
+    src/packet_parser.cpp ^
+    src/sni_extractor.cpp ^
+    src/types.cpp
 ```
 
----
-
-# Running the Project
-
-Basic execution
-
+**Multi-threaded Version:**
 ```cmd
-dpi_engine.exe test_dpi.pcap output.pcap
+g++ -std=c++17 -pthread -O2 -I include -o dpi_engine ^
+    src/dpi_mt.cpp ^
+    src/pcap_reader.cpp ^
+    src/packet_parser.cpp ^
+    src/sni_extractor.cpp ^
+    src/types.cpp
 ```
 
-Block YouTube traffic
+### Running
 
+**Basic usage:**
 ```cmd
-dpi_engine.exe test_dpi.pcap output.pcap --block-app YouTube
+./dpi_engine.exe test_dpi.pcap output.pcap
 ```
 
-Block multiple applications and domains
+**With blocking:**
+```cmd
+./dpi_engine.exe test_dpi.pcap output.pcap ^
+    --block-app YouTube ^
+    --block-app TikTok ^
+    --block-ip 192.168.1.50 ^
+    --block-domain facebook
+```
 
-### Windows CMD
+**Configure threads (multi-threaded only):**
+```cmd
+./dpi_engine.exe input.pcap output.pcap --lbs 4 --fps 4
+# Creates 4 LB threads × 4 FP threads = 16 processing threads
+```
+
+### Creating Test Data
 
 ```cmd
-dpi_engine.exe test_dpi.pcap output.pcap ^
---block-app YouTube ^
---block-app TikTok ^
---block-ip 192.168.1.50 ^
---block-domain facebook
+python generate_test_pcap.py
+# Creates test_dpi.pcap with sample traffic
 ```
 
 ---
