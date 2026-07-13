@@ -371,6 +371,14 @@ This project provided practical experience in:
 
 ---
 
+## Future Implementation
+
+* Interactive network analytics dashboard using **Streamlit** and **Plotly**.
+* Real-time visualization of traffic statistics and application-wise analysis.
+* Machine learning-based traffic prediction for bandwidth usage and network trends.
+
+---
+
 # Conclusion
 
 This project demonstrates the implementation of a **Deep Packet Inspection (DPI) Engine** capable of parsing network packets, identifying applications from encrypted and unencrypted traffic, tracking network flows, applying user-defined filtering rules, and generating a filtered PCAP file along with detailed traffic statistics. It provides practical exposure to packet processing, network protocol analysis, concurrent programming, and modern network security techniques commonly used in enterprise firewalls and traffic management systems.
