@@ -211,18 +211,6 @@ packet_analyzer/
 
 # Building the Project
 
-### Linux / macOS
-
-```bash
-g++ -std=c++17 -O2 -pthread -I include \
-src/dpi_mt.cpp \
-src/pcap_reader.cpp \
-src/packet_parser.cpp \
-src/sni_extractor.cpp \
-src/types.cpp \
--o dpi_engine
-```
-
 ### Windows (MinGW)
 
 ```cmd
@@ -243,25 +231,17 @@ src\types.cpp ^
 
 Basic execution
 
-```bash
-dpi_engine test_dpi.pcap output.pcap
+```cmd
+dpi_engine.exe test_dpi.pcap output.pcap
 ```
 
 Block YouTube traffic
 
-```bash
-dpi_engine test_dpi.pcap output.pcap --block-app YouTube
+```cmd
+dpi_engine.exe test_dpi.pcap output.pcap --block-app YouTube
 ```
 
 Block multiple applications and domains
-
-```bash
-dpi_engine test_dpi.pcap output.pcap \
---block-app YouTube \
---block-app TikTok \
---block-ip 192.168.1.50 \
---block-domain facebook
-```
 
 ### Windows CMD
 
