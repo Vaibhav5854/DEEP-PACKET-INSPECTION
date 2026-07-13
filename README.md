@@ -235,12 +235,12 @@ g++ -std=c++17 -pthread -O2 -I include -o dpi_engine ^
 
 **Basic usage:**
 ```cmd
-./dpi_engine.exe test_dpi.pcap output.pcap
+dpi_engine.exe test_dpi.pcap output.pcap
 ```
 
 **With blocking:**
 ```cmd
-./dpi_engine.exe test_dpi.pcap output.pcap ^
+dpi_engine.exe test_dpi.pcap output.pcap ^
     --block-app YouTube ^
     --block-app TikTok ^
     --block-ip 192.168.1.50 ^
@@ -249,7 +249,7 @@ g++ -std=c++17 -pthread -O2 -I include -o dpi_engine ^
 
 **Configure threads (multi-threaded only):**
 ```cmd
-./dpi_engine.exe input.pcap output.pcap --lbs 4 --fps 4
+dpi_engine.exe input.pcap output.pcap --lbs 4 --fps 4
 # Creates 4 LB threads × 4 FP threads = 16 processing threads
 ```
 
