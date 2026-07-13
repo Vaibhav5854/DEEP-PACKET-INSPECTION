@@ -189,7 +189,6 @@ packet_analyzer/
 ├── test_dpi.pcap
 ├── output.pcap
 ├── generate_test_pcap.py
-├── dpi_engine.exe
 ├── README.md
 └── WINDOWS_SETUP.md
 ```
